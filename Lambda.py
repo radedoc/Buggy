@@ -50,7 +50,7 @@ def get_welcome_response():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "Welcome to Buggy One. " \
+    speech_output = "Welcome to Buggy One. " + \
                     "Please tell me what to type."
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
@@ -62,7 +62,7 @@ def get_welcome_response():
 
 def handle_session_end_request():
     card_title = "Session Ended"
-    speech_output = "Thank you for trying the Alexa Skills Kit sample. " \
+    speech_output = "Thank you for trying Buggy One. " + \
                     "Have a nice day! "
     # Setting this to true ends the session and exits the skill.
     should_end_session = True
@@ -85,10 +85,13 @@ def set_color_in_session(intent, session):
 
     if 'Keyword' in intent['slots']:
         favorite_color = intent['slots']['Keyword']['value']
+        var = intent['slots']['Variable']['value']
+        cmp = intent['slots']['Comparison']['value']
+        num = intent['slots']['Number']['value']
         session_attributes = create_favorite_color_attributes(favorite_color)
         speech_output = "You typed " + \
-                        favorite_color + \
-                        ". You can ask what you typed by saying, " \
+                        favorite_color + "" + var + "" + cmp + "" + num + \
+                        ". You can ask what you typed by saying, " + \
                         "what did I just type?"
         reprompt_text = "You can ask me what you typed."
     else:
