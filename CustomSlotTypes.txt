@@ -1,0 +1,16 @@
+LIST_OF_KEYWORDS
+for
+if
+while
+done
+
+LIST_OF_VARIABLES
+i
+j
+k
+n
+
+LIST_OF_COMPARISONS
+greater than
+less than
+equals
