@@ -1,0 +1,4 @@
+JustTypedIntent what did i type
+JustTypedIntent what did i just type
+JustTypedIntent what i just typed
+TypePythonIntent {Keyword} {Variable}  is {Comparison} {Number}
