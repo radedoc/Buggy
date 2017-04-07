@@ -1,7 +1,13 @@
 {
   "intents": [
     {
-      "intent": "TypePythonIntent"
+      "intent": "TypePythonIntent",
+      "slots": [
+        {
+          "name": "Color",
+          "type": "LIST_OF_COLORS"
+        }
+      ]
     },
     {
       "intent": "MoveCursorIntent"
