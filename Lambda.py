@@ -50,8 +50,7 @@ def get_welcome_response():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "Welcome to Buggy One. " + \
-                    "Please tell me what to type."
+    speech_output = "Welcome to Buggy One. Please tell me what to type."
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
     reprompt_text = "Please tell me what to type."
@@ -90,7 +89,7 @@ def set_color_in_session(intent, session):
         num = intent['slots']['Number']['value']
         session_attributes = create_favorite_color_attributes(favorite_color)
         speech_output = "You typed " + \
-                        favorite_color + "" + var + "" + cmp + "" + num + \
+                        favorite_color + "" + var + " is " + cmp + "" + num + \
                         ". You can ask what you typed by saying, " + \
                         "what did I just type?"
         reprompt_text = "You can ask me what you typed."
