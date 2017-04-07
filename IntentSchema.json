@@ -1,0 +1,31 @@
+{
+  "intents": [
+    {
+      "intent": "TypePythonIntent"
+    },
+    {
+      "intent": "MoveCursorIntent"
+    },
+    {
+      "intent": "SearchIntent"
+    },
+    {
+      "intent": "RunCodeIntent"
+    },
+    {
+      "intent": "ChooseFileIntent"
+    },
+    {
+      "intent": "UndoActionIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}
