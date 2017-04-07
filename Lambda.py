@@ -40,7 +40,6 @@ def build_response(session_attributes, speechlet_response):
         'response': speechlet_response
     }
 
-
 # --------------- Functions that control the skill's behavior ------------------
 
 def get_welcome_response():
@@ -83,6 +82,10 @@ def set_color_in_session(intent, session):
     should_end_session = False
 
     if 'Keyword' in intent['slots']:
+        global favorite_color
+        global cmp
+        global num
+        global var
         favorite_color = intent['slots']['Keyword']['value']
         var = intent['slots']['Variable']['value']
         cmp = intent['slots']['Comparison']['value']
@@ -106,7 +109,9 @@ def get_color_from_session(intent, session):
 
     if session.get('attributes', {}) and "favoriteColor" in session.get('attributes', {}):
         favorite_color = session['attributes']['favoriteColor']
-        speech_output = "You just typed " + favorite_color + "."
+        speech_output = "You typed " + \
+                        favorite_color + "" + var + " is " + cmp + "" + num + \
+                        "."
         should_end_session = True
     else:
         speech_output = "I'm not sure what you just typed."
