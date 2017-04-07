@@ -4,8 +4,8 @@
       "intent": "TypePythonIntent",
       "slots": [
         {
-          "name": "Color",
-          "type": "LIST_OF_COLORS"
+          "name": "Keyword",
+          "type": "LIST_OF_KEYWORDS"
         }
       ]
     },
