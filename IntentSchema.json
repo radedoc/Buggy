@@ -6,11 +6,26 @@
         {
           "name": "Keyword",
           "type": "LIST_OF_KEYWORDS"
+        },
+        {
+          "name": "Variable",
+          "type": "LIST_OF_VARIABLES"
+        },
+        {
+          "name": "Comparison",
+          "type": "LIST_OF_COMPARISONS"
+        },
+        {
+          "name": "Number",
+          "type": "AMAZON.NUMBER"
         }
       ]
     },
     {
       "intent": "MoveCursorIntent"
+    },
+    {
+      "intent": "JustTypedIntent"
     },
     {
       "intent": "SearchIntent"
