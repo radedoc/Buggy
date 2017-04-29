@@ -1,0 +1,17 @@
+Language model (for reference)
+
+<input> ::= <word> | <word> <input>
+<word> ::= "Buggy" <meta> "done" | <literal> | "back"
+<meta> ::= <move> | <search> | <name>
+<move> ::= <amount> <direction> | <direction>
+<amount> ::= "1" | "2" | "3" …
+<direction> ::= "up" | "down" | "left" | "right"
+<search> ::= "find" <word> | "replace" <word> "with" <anyword>
+<word> ::= any word in the text so far 
+<anyword> ::= any english word
+<literal> ::= <keyword> | <special char>
+<keyword> ::= "for" | "in" | "if" | "else" | "elephant" | "while" | "until" | "continue" | "do"
+<special char> ::= <side>  <style> | "shift" <letter> | <char>  
+<side> ::= "left" | "right"
+<style> ::= "curly" | "square" | "round"
+<char> ::= "new" | "tab" | "dot" | "a" | "b" |  "c" …
