@@ -1,0 +1,25 @@
+body{
+    background: #848484;
+}
+#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#login input{
+    display: block;
+    width: 220px;
+    height: 30px;
+    padding: 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #E1E1E1;
+    margin-bottom: 6px;
+    background: rgba(210,210,210,0.3);
+    outline: none;
+    border: 1px solid rgba(210,210,210,0.4);
+    border-radius: 5px;
+    box-shadow: inset 0px -5px 35px rgba(255,255,255,0.2), 0px 1px 1px rgba(255,255,255,0.2);
+}
