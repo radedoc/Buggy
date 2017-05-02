@@ -20,6 +20,38 @@
 
 
 
+/************** function that OPENS a file from a users account ***************/
+function openFile(username, filename, callbackSucc, req) {
+    // Connect to the Server
+    MongoClient.connect(url, function (err, db) {
+      if (err) {
+        console.log('Unable to connect to the mongoDB server. Error:', err);
+      } else {
+        console.log('Database connection established');
+      }
+
+        var userDB = db.collection('users')
+        //CHECK IF DB CONTAINS ACCOUNT WITH THAT EMAIL BEFORE CREATING NEW ACCOUNT
+        userDB.find({'username' : username}).toArray(function(err, result) {
+          if (err) {
+              console.log(err);
+          } else if (result.length) {
+            console.log("Found account" + username)
+            var dictionary = result[0]["files"];
+            var file = dictionary[filename]
+            //send code so that the it can be set into the editor
+          } else {
+                console.log("no files available of that name")
+                return 0
+            }
+          })
+      });
+    console.log("sorry, you are currently not logged into an account :(")
+}
+
+/********************************************************************************/
+
+
 
 /*********************** SAVE FUNCTIONS HERE *****************************************/
 function saveFile(email, filename, contentString, callbackSucc, res) {
